@@ -1,0 +1,74 @@
+name: Build and Upload Release
+
+on:
+   push:
+      tags:
+         - 'v**'
+
+   # Allow running manually from the actions tab
+   workflow_dispatch:
+
+env:
+   # See: https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio
+   IMAGE_NAME: 5etools-img
+
+concurrency:
+   group: "release"
+   cancel-in-progress: true
+
+jobs:
+   create-release:
+      runs-on: ubuntu-latest
+      steps:
+         -  uses: actions/checkout@master
+
+         -  name: Archive Images
+            run: |
+               rm -rf docker Dockerfile
+               mkdir -p img
+               ls | grep -v img | xargs mv -t img
+               zip -r -s 500m img-${{ github.ref_name }}.zip img/
+
+         -  name: Upload Release
+            # Add the files one-by-one in an effort to avoid timeouts
+            # Sleep between creating the release and adding files, as the release takes time to be created (?)
+            run: |
+               gh release create "${{github.ref_name}}" --title "${{github.ref_name}}" --notes "Version ${{ github.ref_name }}"
+               sleep 10
+               for f in $(find . -name 'img-${{ github.ref_name }}.*' -print); do gh release upload ${{ github.ref_name }} $f; done
+            env:
+               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+   create-image:
+      runs-on: ubuntu-latest
+      steps:
+         -  uses: actions/checkout@master
+
+         # See: https://stackoverflow.com/a/58178121
+         -  name: Set Env
+            run: |
+               IMAGE_VERSION=${{ github.ref_name }}
+               # Strip "v" prefix from tag name
+               [[ "${{ github.ref }}" == "refs/tags/"* ]] && IMAGE_VERSION=$(echo $IMAGE_VERSION | sed -e 's/^v//')
+               echo "IMAGE_VERSION=$IMAGE_VERSION" >> $GITHUB_ENV
+
+               echo "IMAGE_ID=$(echo ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME | tr '[A-Z]' '[a-z]')" >> $GITHUB_ENV
+
+         # region See: https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio
+         -  name: Build Image
+            run: |
+               docker build -t $IMAGE_NAME .
+
+         -  name: Log In to Registry
+            run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+         -  name: Push Image
+            run: |
+               echo IMAGE_ID=$IMAGE_ID
+               echo IMAGE_VERSION=$IMAGE_VERSION
+               docker tag $IMAGE_NAME $IMAGE_ID:$IMAGE_VERSION
+               # Always tag latest when pushing a tag, as we don't expect to ever merge old tags
+               [[ "${{ github.ref }}" == "refs/tags/"* ]] && docker tag $IMAGE_NAME $IMAGE_ID:latest
+               docker push $IMAGE_ID:$IMAGE_VERSION
+               docker push $IMAGE_ID:latest
+         # endregion

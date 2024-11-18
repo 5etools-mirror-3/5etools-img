@@ -1,0 +1,2411 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-us" class="no-js">
+<!--<![endif]-->
+
+
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+
+        
+
+        <meta charset="UTF-8">
+        <title>Not found - D&amp;D Beyond </title>
+        <link rel="shortcut icon" href="https://media.dndbeyond.com/images/web/favicon.png" />
+        <meta name="description" content="" />
+        <meta name="theme-color" content="#121212" />
+
+        <script type="importmap">
+            {
+              "imports": {
+                "react": "https://esm.sh/react",
+                "react-dom": "https://esm.sh/react-dom",
+                "react/jsx-runtime": "https://esm.sh/react/jsx-runtime"
+              }
+            }
+        </script>
+
+        
+            <script>!function(){window.semaphore=window.semaphore||[],window.ketch=function(){window.semaphore.push(arguments)};var e=new URLSearchParams(document.location.search),o=e.has("property")?e.get("property"):"dnd",n=document.createElement("script");n.type="text/javascript",n.src="https://global.ketchcdn.com/web/v3/config/hasbro/".concat(o,"/boot.js"),n.defer=n.async=!0,document.getElementsByTagName("head")[0].appendChild(n)}();</script>
+        
+        <!-- Data Layer -->
+        
+
+<script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+
+ 
+    function pushToDataLayer(properties) {
+        if (properties.event === 'transaction') {
+            pushToDataLayerNoRefresh(properties);
+        } else {
+            window.dataLayer.push(properties);
+        }
+    }
+
+    function pushToDataLayerNoRefresh(properties) {
+        if (performance.navigation.type == 0) {
+            window.dataLayer.push(properties);
+        } else {
+            console.log('dataLayer event already fired');
+        }
+    }
+
+    function pushLoginAttemptToDataLayer(loginSource) {
+        var event = {
+            'event': 'login-attempt',
+            'loginSource': loginSource,
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushLoginCompleteToDataLayer(loginSource) {
+        var event = {
+            'event': 'login-complete',
+            'loginSource': loginSource,
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushLoginFailureToDataLayer(loginSource, failureReason) {
+        var event = {
+            'event': 'login-fail',
+            'loginSource': loginSource,
+                'failureReason': failureReason,
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushRegistrationAttemptToDataLayer(registrationSource) {
+        var event = {
+            'event': 'registration-attempt',
+            'loginSource': registrationSource,
+        };
+
+        pushToDataLayer(event);
+    }
+
+
+    function pushRegistrationCompleteToDataLayer(registrationSource) {
+        var event = {
+            'event': 'registration-complete',
+            'loginSource': registrationSource,
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushRegistrationFailureToDataLayer(registrationSource, failureReason) {
+        var event = {
+            'event': 'registration-fail',
+            'registrationSource': registrationSource,
+            'failureReason': failureReason,
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushProductClickToDataLayer(itemProperties) {
+        var listName = itemProperties.list;
+
+        var event = {
+            'event': 'product-click',
+            'ecommerce': {
+                'currencyCode': 'USD',
+                'click': {
+                    'actionField': {
+                        'list': listName,
+                    },
+                    'products': [
+                        itemProperties
+                    ]
+                }
+            }
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushCheckoutOptionToDataLayer(step, option) {
+        var event = {
+             'event': 'checkout-option',
+             'ecommerce': {
+                 'checkout_option': {
+                 'actionField': {
+                     'step': step,
+                     'option': option
+                    }
+                }
+            }
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushAddToCartToDataLayer(itemProperties) {
+        var listName = itemProperties.list;
+        var position = itemProperties.position;
+
+        var event = {
+            'event': 'add-to-cart',
+            'ecommerce': {
+                'currencyCode': 'USD',
+                'add': {
+                    'actionField': {
+                        'list': listName,
+                        'position': position,
+                    },
+                    'products': [
+                        itemProperties
+                    ]
+                }
+            }
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushPromotionDetailToDataLayer(bannerId, bannerName) {
+        var event = {
+            'event': 'promotion-impression',
+            'ecommerce': {
+                'promoView': {
+                    'promotions': [
+                        {
+                            'id': bannerId,
+                            'name': bannerName,
+                            'creative': '',
+                            'position': 'homepage_banner_1'
+                        }
+                    ]
+                }
+            }
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushPromotionClickToDataLayer(bannerId, bannerName) {
+        var event = {
+            'event': 'promotion-click',
+            'ecommerce': {
+                'promoClick': {
+                    'promotions': [
+                        {
+                            'id': bannerId,
+                            'name': bannerName,
+                            'creative': '',
+                            'position': 'homepage_banner_1'
+                        }
+                    ]
+                }
+            }
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function pushRemoveFromCartToDataLayer(itemProperties) {
+        var event = {
+            'event': 'remove-from-cart',
+            'ecommerce': {
+                'currencyCode': 'USD',
+                'remove': {
+                    'products': [
+                        itemProperties
+                    ]
+                }
+            }
+        };
+
+        pushToDataLayer(event);
+    }
+
+    function getItemPropertiesFromImpressions(id) {
+        if (id) {
+            var impressions = window.dataLayer.filter(i =>
+                i.event === 'product-impression')[0]
+                ?.ecommerce
+                ?.impressions;
+
+            // Impressions will be null on details pages (/marketplace/sourcebooks/explorers-guide-to-wildemount).
+            // We can then pull product details from the dataLayer's product-detail-view event.
+            if (!impressions) {
+                impressions = window.dataLayer.filter(i => i.event === 'product-detail-view')[0]
+                    ?.ecommerce
+                                ?.detail
+                                ?.products;
+            }
+
+            return impressions?.filter(i => i.id === id)[0];
+        }
+    }
+
+    function getAllItemPropertiesFromCart() {
+        var cartImpressions = window.dataLayer.filter(i =>
+            i.event === 'checkout-step')[0]
+            ?.ecommerce
+            ?.checkout
+            ?.products;
+
+        return cartImpressions;
+    }
+
+    function getItemPropertiesFromCart(id) {
+        if (id) {
+            var cartImpressions = window.dataLayer.filter(i =>
+                i.event === 'checkout-step')[0]
+                ?.ecommerce
+                ?.checkout
+                ?.products;
+
+            return cartImpressions?.filter(i => i.id === id)[0];
+        }
+    }
+
+    function getLoginCookie(name) {
+        // Split cookie string and get all individual name=value pairs in an array
+        var cookieArr = document.cookie.split(";");
+
+        // Loop through the array elements
+        for (var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+
+            /* Removing whitespace at the beginning of the cookie name
+            and compare it with the given string */
+            if (name == cookiePair[0].trim()) {
+                // Decode the cookie value and return
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+
+        // Return null if not found
+        return null;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        try {
+            // Get cookies using our custom function
+            var loginSource = getLoginCookie("login-complete");
+            var registrationSource = getLoginCookie("registration-complete");
+
+            if (loginSource && loginSource !== "") {
+                pushLoginCompleteToDataLayer(loginSource);
+
+                // delete the cookie
+                document.cookie = "login-complete=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+
+            if(registrationSource && registrationSource !== "") {
+                pushRegistrationCompleteToDataLayer(registrationSource);
+
+                // delete the cookie
+                document.cookie = "registration-complete=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+        }
+        catch (err) {
+            console.log(err.message);
+        }
+    });
+
+    pushToDataLayer(
+        {"event":"dataLayer-initialized","userId":undefined,"sessionId":undefined,"personasType":undefined,"loggedIn":false,"userJoinDate":undefined,"subscriptionLevel":undefined,"theme":undefined,"comments":undefined,"articleTags":undefined}
+    );
+
+    
+
+</script>
+
+
+        <!-- GTM -->
+        
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N3KHV3K');</script>
+<!-- End Google Tag Manager -->
+
+
+        <!-- Responsive Meta Tag -->
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+    
+        
+            <link rel="search" href="https://www.dndbeyond.com/opensearch.xml" type="application/opensearchdescription+xml" title="Not found - D&amp;D Beyond"/>
+        
+
+        <!-- Links -->
+        <link rel="canonical" href="https://www.dndbeyond.com/compendium-images/free-rules/dmg/travel-planner.pdf" />
+
+        
+    
+        <!-- Meta Properties -->
+        <meta name="robots" content="noindex" />
+
+        
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/content/1-0-2999-0/skins/blocks/css/compiled.css"/>
+<link rel="stylesheet" href="/content/1-0-2999-0/skins/waterdeep/css/compiled.css"/>
+<link rel="stylesheet" type="text/css" href="/api/custom-css" />
+        
+
+        <script type="text/javascript">
+            var onloadCallback = function () {
+                if (window.Cobalt) {
+                    Cobalt.runOnHtmlInsert(Cobalt.Forms.handlegReCaptchaRender);
+                }
+            };
+        </script>
+
+        <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+        <script src="https://apis.google.com/js/platform.js"></script>
+
+        <!-- JavaScript -->
+        <script src="/js/jquery?v=GcECUcJNx3XVVv_uJn199Nryz_0aCdArtcRFwLqkJy41"></script>
+
+        <script src="/js/cobalt?v=O1hotLp8oFBoJpxVZF5IOhukRstb4yQnl_OLwVs6C7Y1"></script>
+
+        <script src="/js/waterdeep?v=WRpAubjpzoQH2z9hF2UBtVfWb3Tl7bFT7hg7VxoSLOU1"></script>
+
+        
+        
+    
+
+
+        <script>
+    // Gamesight SDK Snippet
+    (function (G, m, s, g, h, t) {
+        G.gsght = G.gsght || function () {
+            (G.gsght.q = G.gsght.q || []).push(arguments)
+        }, G.gsght.q = [], G.gsght.h = 1 * new Date();
+        h = m.createElement(s), t = m.getElementsByTagName(s)[0]; h.async = 1; h.src = g; t.parentNode.insertBefore(h, t)
+    })(window, document, 'script', 'https://cdn.gsght.com/sdk.js');
+
+    gsght("init", "GS-101147");
+    gsght("set", "acm_enabled", true);
+
+    
+        gsght("send");
+    
+</script>
+
+        
+    </head>
+
+    <body class="site site-dndbeyond site-www body-error show-ads user-anonymous lang-en site-lang-en template-none skin-light-on-dark responsive-enabled" data-user-lang="1">
+        
+                <script>
+                  (function(h,o,u,n,d) {
+                    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+                    d=o.createElement(u);d.async=1;d.src=n
+                    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+                  })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js','DD_RUM')
+                  window.DD_RUM.onReady(function() {
+                    window.DD_RUM.init({
+                      clientToken: 'pubaac4c24ff0743abe1348736904d92834',
+                      applicationId: '29d2e9d5-cad4-4bb8-b1bd-50eada3666d1',
+                      site: 'datadoghq.com',
+                      service: 'web-stack-live',
+                      env: 'live',
+                      version: 'waterdeep 1-0-2999-0',
+                      sessionSampleRate: 0,
+                      sessionReplaySampleRate: 0,
+                      trackUserInteractions: true,
+                      trackResources: true,
+                      trackLongTasks: true,
+                      defaultPrivacyLevel: 'mask-user-input',
+                    });
+                  })
+                </script>
+        
+        <!-- GTM -->
+        
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3KHV3K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+        <!-- No Script -->
+        <noscript class="b-noscript">
+            <p><i class="b-noscript-icon"></i> This site works best with JavaScript enabled. Please enable JavaScript to get the best experience from this site.</p>
+        </noscript>
+
+        <!-- Layout Start -->
+        
+    <a href="#content" id="skip-to-content-link">Skip to Content</a>
+<style>
+    #skip-to-content-link {
+        position: fixed;
+        z-index: 99999;
+        top: -999px;
+        left: -99999px;
+        background: rgba(0,0,0,0.5);
+        border: 1px solid #fff;
+        border-radius: 4px;
+        padding: 8px;
+        color: #fff;
+        transition: top 250ms ease-in-out;
+    }
+
+    #skip-to-content-link:focus {
+        top: 10px;
+        left: 10px;
+        transition: top 250ms ease-in-out;
+    }
+</style>
+    <div class="ddb-site-banner" data-banner-identifier="d6eeb08f-2e21-41ea-9076-2f6bb0b79497">
+        <div class="ddb-site-banner--message">🔥 <a href="https://marketplace.dndbeyond.com/LP-CRB-2024/core-rulebook-bundle?&amp;icid_medium=organic&amp;icid_source=homepage&amp;icid_campaign=2024core_playershandbook_&amp;icid_content=dmg_hype">Order the 2024 Digital &amp; Physical Core Rulebook Bundle and save $60!</a> 🔥</div>
+        <div class="ddb-site-banner--dismiss">Dismiss</div>
+    </div>
+    <style></style>
+    <script>
+    initializeBanner('d6eeb08f-2e21-41ea-9076-2f6bb0b79497', '', '');
+
+    function initializeBanner(uniqueIdentifier, bannerId, bannerName) {
+        var banner = document.querySelectorAll(`[data-banner-identifier='${uniqueIdentifier}']`)[0];
+        var bannerCookieName = `ddbSiteBanner:${uniqueIdentifier}`;
+
+        banner.querySelector('.ddb-site-banner--dismiss').addEventListener('click', function() {
+            dismissBanner(banner); 
+        });
+        
+        var links = banner.querySelectorAll('.ddb-site-banner a');
+        links.forEach(l => {
+            l.addEventListener('click', function() {
+                pushPromotionClickToDataLayer(bannerId, bannerName);
+            });
+        });
+        
+        if (bannerIsDismissed()) {
+            hideBanner(banner);
+        } else {
+            // push promotion details to data layer
+            pushPromotionDetailToDataLayer(bannerId, bannerName);
+        }
+
+        function dismissBanner(banner) {
+            setBannerDismissalCookie();
+            hideBanner(banner);
+            return true;
+        }
+
+        function bannerIsDismissed() {
+            return document.cookie.indexOf(bannerCookieName) > -1;
+        }
+
+        function hideBanner(banner) {
+            banner.style.display = 'none';
+            repositionSite();
+            return true;
+        }
+
+        function setBannerDismissalCookie() {
+            document.cookie = bannerCookieName + '=true;expires=' + timeTravel(new Date(), 7) + ';path=/';
+            return true;
+        }
+
+        function timeTravel(startDate, daysToTravel) {
+            return new Date(startDate.setDate(startDate.getDate() + daysToTravel)).toUTCString();
+        }
+
+        function repositionSite(position, top) {
+            var body = document.querySelector('body');
+
+            body.style.top = (top || 0) + 'px';
+            body.style.position = position || 'initial';
+        }
+    }
+    </script>
+
+    <div id="site" class="fixed single-column">
+        <div id="site-main">
+            <!-- Above Header, ex: Netbar -->
+            <div class="site-bar">
+                <div class="site-bar__container">
+                    
+
+<a class="logo fifty_anniversary" href="https://www.dndbeyond.com/">D&amp;D Beyond</a>
+
+
+<div class="site-interactions">
+    <div class="site-interactions-groups">
+        <div class="site-interactions-group site-interactions-group-search">
+            <div class="site-search">
+                <form class="es-form es-form-global" method="get" action="/search" id="es-form-global" data-validation-disabled="true">
+    <div class="es-form-icon"></div>
+    <input name="q" class="es-form-field-query" autocomplete="on" placeholder="Search Everything..." />
+    <div class="hide autocomplete-target"></div>
+</form>
+
+<script>
+    Waterdeep.ElasticSearch.initialize($("#es-form-global .es-form-field-query"));
+    
+        Waterdeep.ElasticSearch.BaseSearchUrl = "/search";
+    
+
+    $('#es-form-global .es-form-icon').click(Waterdeep.ElasticSearch.navigateToSearchWithQuery);
+    $('#es-form-global').submit(Waterdeep.ElasticSearch.navigateToSearchWithQuery);
+</script>
+
+            </div>
+        </div>
+        <div class="site-interactions-group site-interactions-group-social">
+            <ul class="social-network-list">
+                <li class="social-network-item social-network-discord"><a class="social-network-link" title="Discord" href="https://dndbeyond.com/discord" target="_blank"><img class="social-network-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/discord.png" alt="D&D Discord" /></a></li>
+                <li class="social-network-item social-network-instagram"><a class="social-network-link" title="Instagram" href="https://www.instagram.com/dndbeyond/" target="_blank"><img class="social-network-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/instagram.png" alt="D&D Beyond Instagram" /></i></a></li>
+                <li class="social-network-item social-network-facebook"><a class="social-network-link" title="Facebook" href="https://www.facebook.com/dndbeyond" target="_blank"><img class="social-network-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/facebook.png" alt="D&D Beyond Facebook" /></a></li>
+                <li class="social-network-item social-network-twitch"><a class="social-network-link" title="Twitch" href="https://www.twitch.tv/dndbeyond" target="_blank"><img class="social-network-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/twitch.png" alt="D&D Beyond Twitch" /></a></li>
+                <li class="social-network-item social-network-x"><a class="social-network-link" title="X" href="https://twitter.com/dndbeyond" target="_blank"><img class="social-network-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/x.png" alt="D&D Beyond X" /></i></a></li>
+                <li class="social-network-item social-network-youtube"><a class="social-network-link" title="YouTube" href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw" target="_blank"><img class="social-network-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/youtube.png" alt="D&D Beyond YouTube" /></a></li>
+                <li class="social-network-item social-network-tiktok"><a class="social-network-link" title="TikTok" href="https://www.tiktok.com/@dnd_beyond" target="_blank"><img class="social-network-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/tiktok.png" alt="TikTok" /></a></li>
+                
+            </ul>
+        </div>
+        <div class="site-interactions-group site-interactions-group-user">
+            <div class="user-interactions">
+                
+                    <div class="user-interactions-signin">
+                        <a href="/login?returnUrl=https%3a%2f%2fwww.dndbeyond.com%2fcompendium-images%2ffree-rules%2fdmg%2ftravel-planner.pdf" id="login-link" class="user-interactions-action-signin user-interactions-action">Sign In</a>
+                        <a href="/register?returnUrl=https%3a%2f%2fwww.dndbeyond.com%2fcompendium-images%2ffree-rules%2fdmg%2ftravel-planner.pdf" id="register-link" class="user-interactions-action-register user-interactions-action">Sign Up</a>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    a.logo + a.logo {
+        display: none;
+    }
+</style>
+
+                </div>
+            </div>
+            <!-- Header, ex: Logo, search, etc. -->
+            <header class="main" role="banner">
+                    
+
+<h1 id="logo">
+    <a class="logo fifty_anniversary" href="https://www.dndbeyond.com/">D&amp;D Beyond</a>
+    <div class="print-logo">
+        <img src="https://media-waterdeep.cursecdn.com/attachments/3/308/ddbb-w.png" alt="D&amp;D Beyond" />
+    </div>
+</h1>
+
+<nav class="main p-nav p-nav-a j-sticky" role="navigation">
+    <ul class="b-list b-list-a">
+        
+    <li id="nav-collections" class=" section b-list-item p-nav-item">
+        
+            <a href="#"  class="">
+                <span class="b-list-label">
+                   Collections
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-my-characters" class="  b-list-item p-nav-item">
+        
+            <a href="/my-characters"  class="">
+                <span class="b-list-label">
+                   My Characters
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-my-campaigns" class="  b-list-item p-nav-item">
+        
+            <a href="/my-campaigns"  class="">
+                <span class="b-list-label">
+                   My Campaigns
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-my-encounters" class="  b-list-item p-nav-item">
+        
+            <a href="/my-encounters"  class="">
+                <span class="b-list-label">
+                   My Encounters
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-my-dice" class="  b-list-item p-nav-item">
+        
+            <a href="/my-dice"  class="">
+                <span class="b-list-label">
+                   My Dice
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-my-homebrew-collection" class="  b-list-item p-nav-item">
+        
+            <a href="/my-collection"  class="">
+                <span class="b-list-label">
+                   My Homebrew Collection
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-my-homebrew-creations" class="  b-list-item p-nav-item">
+        
+            <a href="/my-creations"  class="">
+                <span class="b-list-label">
+                   My Homebrew Creations
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-browse-create-homebrew" class="  b-list-item p-nav-item">
+        
+            <a href="/homebrew"  class="">
+                <span class="b-list-label">
+                   Browse &amp; Create Homebrew
+    
+                </span>
+            </a>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+    <li id="nav-game-rules" class=" section b-list-item p-nav-item">
+        
+            <a href="/game-rules"  class="">
+                <span class="b-list-label">
+                   Game Rules
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-species" class="  b-list-item p-nav-item">
+        
+            <a href="/species"  class="">
+                <span class="b-list-label">
+                   Species
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-classes" class="  b-list-item p-nav-item">
+        
+            <a href="/classes"  class="">
+                <span class="b-list-label">
+                   Classes
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-backgrounds" class="  b-list-item p-nav-item">
+        
+            <a href="/backgrounds"  class="">
+                <span class="b-list-label">
+                   Backgrounds
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-feats" class="  b-list-item p-nav-item">
+        
+            <a href="/feats"  class="">
+                <span class="b-list-label">
+                   Feats
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-spells" class="  b-list-item p-nav-item">
+        
+            <a href="/spells"  class="">
+                <span class="b-list-label">
+                   Spells
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-magic-items" class="  b-list-item p-nav-item">
+        
+            <a href="/magic-items"  class="">
+                <span class="b-list-label">
+                   Magic Items
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-monsters" class="  b-list-item p-nav-item">
+        
+            <a href="/monsters"  class="">
+                <span class="b-list-label">
+                   Monsters
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-equipment" class="  b-list-item p-nav-item">
+        
+            <a href="/equipment"  class="">
+                <span class="b-list-label">
+                   Equipment
+    
+                </span>
+            </a>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+    <li id="nav-sources" class=" section b-list-item p-nav-item">
+        
+            <a href="/sources"  class="">
+                <span class="b-list-label">
+                   Sources
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-view-all" class="  b-list-item p-nav-item">
+        
+            <a href="/sources"  class="">
+                <span class="b-list-label">
+                   View All
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-sourcebooks" class=" section b-list-item p-nav-item">
+        
+            <a href="/sources#Sourcebooks"  class="">
+                <span class="b-list-label">
+                   Sourcebooks
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-unearthed-arcana" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/ua"  class="">
+                <span class="b-list-label">
+                   Unearthed Arcana
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-free-rules-2024" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/free-rules"  class="">
+                <span class="b-list-label">
+                   Free Rules (2024)
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-players-handbook-2024" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/phb-2024"  class="">
+                <span class="b-list-label">
+                   Player&#x27;s Handbook (2024)
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-dungeon-masters-guide-2024" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/dmg-2024"  class="">
+                <span class="b-list-label">
+                   Dungeon Master’s Guide (2024)
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-dungeon-masters-guide-2014" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/dmg-2014"  class="">
+                <span class="b-list-label">
+                   Dungeon Master’s Guide (2014)
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-monster-manual-2014" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/mm-2014"  class="">
+                <span class="b-list-label">
+                   Monster Manual (2014)
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-basic-rules-2014" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/basic-rules-2014"  class="">
+                <span class="b-list-label">
+                   Basic Rules (2014)
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-bigby-presents-glory-of-the-giants" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/gotg"  class="">
+                <span class="b-list-label">
+                   Bigby Presents: Glory of the Giants
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-book-of-ebon-tides" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/boet"  class="">
+                <span class="b-list-label">
+                   Book of Ebon Tides
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-eberron-rising-from-the-last-war" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/erftlw"  class="">
+                <span class="b-list-label">
+                   Eberron: Rising from the Last War
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-explorers-guide-to-wildemount" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/egtw"  class="">
+                <span class="b-list-label">
+                   Explorer’s Guide to Wildemount
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-fizbans-treasury-of-dragons" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/ftod"  class="">
+                <span class="b-list-label">
+                   Fizban’s Treasury of Dragons
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-flee-mortals" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/fm"  class="">
+                <span class="b-list-label">
+                   Flee, Mortals!
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-grim-hollow-player-pack" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/ghpp"  class="">
+                <span class="b-list-label">
+                   Grim Hollow: Player Pack
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-mordenkainen-presents-monsters-of-the-multiverse" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/motm"  class="">
+                <span class="b-list-label">
+                   Mordenkainen Presents: Monsters of the Multiverse
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-planescape-adventures-in-the-multiverse" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/paitm"  class="">
+                <span class="b-list-label">
+                   Planescape: Adventures in the Multiverse
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-spelljammer-adventures-in-space" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/sais"  class="">
+                <span class="b-list-label">
+                   Spelljammer: Adventures in Space
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-tashas-cauldron-of-everything" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/tcoe"  class="">
+                <span class="b-list-label">
+                   Tasha’s Cauldron of Everything
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-the-book-of-many-things" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/tbomt"  class="">
+                <span class="b-list-label">
+                   The Book of Many Things
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-xanathars-guide-to-everything" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/xgte"  class="">
+                <span class="b-list-label">
+                   Xanathar’s Guide to Everything
+    
+                </span>
+            </a>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+    <li id="nav-adventures" class=" section b-list-item p-nav-item">
+        
+            <a href="/sources#Adventures"  class="">
+                <span class="b-list-label">
+                   Adventures
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-baldurs-gate-descent-into-avernus" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/bgdia"  class="">
+                <span class="b-list-label">
+                   Baldur’s Gate: Descent into Avernus
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-candlekeep-mysteries" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/cm"  class="">
+                <span class="b-list-label">
+                   Candlekeep Mysteries
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-critical-role-call-of-the-netherdeep" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/cotn"  class="">
+                <span class="b-list-label">
+                   Critical Role: Call of the Netherdeep
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-curse-of-strahd" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/cos"  class="">
+                <span class="b-list-label">
+                   Curse of Strahd
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-dragonlance-shadow-of-the-dragon-queen" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/sotdq"  class="">
+                <span class="b-list-label">
+                   Dragonlance: Shadow of the Dragon Queen
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-dragons-of-stormwreck-isle" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/dosi"  class="">
+                <span class="b-list-label">
+                   Dragons of Stormwreck Isle
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-dungeons-of-drakkenheim" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/dodr"  class="">
+                <span class="b-list-label">
+                   Dungeons of Drakkenheim
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-ghosts-of-saltmarsh" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/gos"  class="">
+                <span class="b-list-label">
+                   Ghosts of Saltmarsh
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-icewind-dale-rime-of-the-frostmaiden" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/idrotf"  class="">
+                <span class="b-list-label">
+                   Icewind Dale: Rime of the Frostmaiden
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-journeys-through-the-radiant-citadel" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/jttrc"  class="">
+                <span class="b-list-label">
+                   Journeys through the Radiant Citadel
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-keys-from-the-golden-vault" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/kftgv"  class="">
+                <span class="b-list-label">
+                   Keys from the Golden Vault
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-lairs-of-etharis" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/loe"  class="">
+                <span class="b-list-label">
+                   Lairs of Etharis
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-out-of-the-abyss" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/oota"  class="">
+                <span class="b-list-label">
+                   Out of the Abyss
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-phandelver-and-below-the-shattered-obelisk" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/pbtso"  class="">
+                <span class="b-list-label">
+                   Phandelver and Below: The Shattered Obelisk
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-princes-of-the-apocalypse" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/pota"  class="">
+                <span class="b-list-label">
+                   Princes of the Apocalypse
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-scions-of-elemental-evil" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/soee"  class="">
+                <span class="b-list-label">
+                   Scions of Elemental Evil
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-storm-kings-thunder" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/skt"  class="">
+                <span class="b-list-label">
+                   Storm King’s Thunder
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-tales-from-the-shadows" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/tfts"  class="">
+                <span class="b-list-label">
+                   Tales from the Shadows
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-tales-from-the-yawning-portal" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/tftyp"  class="">
+                <span class="b-list-label">
+                   Tales from the Yawning Portal
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-the-wild-beyond-the-witchlight" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/twbtw"  class="">
+                <span class="b-list-label">
+                   The Wild Beyond the Witchlight
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-tomb-of-annihilation" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/toa"  class="">
+                <span class="b-list-label">
+                   Tomb of Annihilation
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-tyranny-of-dragons" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/tod"  class="">
+                <span class="b-list-label">
+                   Tyranny of Dragons
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-vecna-eve-of-ruin" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/veor"  class="">
+                <span class="b-list-label">
+                   Vecna: Eve of Ruin
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-waterdeep-dragon-heist" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/wdh"  class="">
+                <span class="b-list-label">
+                   Waterdeep: Dragon Heist
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-waterdeep-dungeon-of-the-mad-mage" class="  b-list-item p-nav-item">
+        
+            <a href="/sources/dnd/wdotmm"  class="">
+                <span class="b-list-label">
+                   Waterdeep: Dungeon of the Mad Mage
+    
+                </span>
+            </a>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+    <li id="nav-tools" class=" section b-list-item p-nav-item">
+        
+            <a href="/tools"  class="">
+                <span class="b-list-label">
+                   Tools
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-character-builder" class="  b-list-item p-nav-item">
+        
+            <a href="/characters/builder#"  class="">
+                <span class="b-list-label">
+                   Character Builder
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-encounters" class="  b-list-item p-nav-item">
+        
+            <a href="/encounter-builder"  class="">
+                <span class="b-list-label">
+                   Encounters
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-mobile-app" class="  b-list-item p-nav-item">
+        
+            <a href="/player-app"  class="">
+                <span class="b-list-label">
+                   Mobile App
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-avrae-discord-bot" class="  b-list-item p-nav-item">
+        
+            <a href="https://avrae.io" target='_blank' rel='noopener' class="">
+                <span class="b-list-label">
+                   Avrae Discord Bot
+    
+                </span>
+            </a>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+    <li id="nav-media" class=" section b-list-item p-nav-item">
+        
+            <a href="/media"  class="">
+                <span class="b-list-label">
+                   Media
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-community-update" class="  b-list-item p-nav-item">
+        
+            <a href="/community-update"  class="">
+                <span class="b-list-label">
+                   Community Update
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-twitch" class="  b-list-item p-nav-item">
+        
+            <a href="https://www.twitch.tv/dndbeyond"  class="">
+                <span class="b-list-label">
+                   Twitch
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-youtube" class="  b-list-item p-nav-item">
+        
+            <a href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw"  class="">
+                <span class="b-list-label">
+                   YouTube
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-changelog" class="  b-list-item p-nav-item">
+        
+            <a href="/changelog"  class="">
+                <span class="b-list-label">
+                   Changelog
+    
+                </span>
+            </a>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+    <li id="nav-forums" class="  b-list-item p-nav-item">
+        
+            <a href="/forums"  class="">
+                <span class="b-list-label">
+                   Forums
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-new-player-guide" class="  b-list-item p-nav-item">
+        
+            <a href="/how-to-play-dnd"  class="">
+                <span class="b-list-label">
+                   New Player Guide
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-subscribe" class="  b-list-item p-nav-item">
+        
+            <a href="/store/subscribe"  class="">
+                <span class="b-list-label">
+                   Subscribe
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-redeem-a-key" class="  b-list-item p-nav-item">
+        
+            <a href="/redeem-key"  class="">
+                <span class="b-list-label">
+                   Redeem A Key
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-marketplace" class="  b-list-item p-nav-item">
+        
+            <a href="https://marketplace.dndbeyond.com/"  class="">
+                <span class="b-list-label">
+                   Marketplace
+    
+                </span>
+            </a>
+        
+    </li>
+
+    </ul>
+    <a data-ga-click-event-tracking-category="Desktop View" id="responsive-topnav-button" class="rs-link rs-link-to-desktop">Desktop View</a>
+    <form class="responsive-sign-out" name="logoutForm" method="post" action="/logout">
+        <button>Sign Out</button>
+    </form>
+</nav>
+
+<script>
+    // hide the sign out button for anonymous users
+    document.addEventListener("DOMContentLoaded", function () {
+        try {
+            if (!Cobalt.User.IsAuthenticated) {
+                $('.responsive-sign-out').addClass('hide');
+            }
+        }
+        catch (err) {
+            console.log(err.message);
+        }
+    });
+</script>
+<div class="es-form-mobile-container">
+    <form class="es-form es-form-mobile" method="get" action="/search" id="es-form-mobile" data-validation-disabled="true">
+        <input name="q" class="es-form-field-query" autocomplete="on" placeholder="Search Everything..." />
+    </form>
+
+    <script>
+        $('#es-form-mobile').submit(function (e) {
+            var base = "/search";
+            var searchTerm = $(this).find('.es-form-field-query').val();
+            var searchQuery = base + "?q=" + searchTerm;
+
+            e.preventDefault();
+            window.location.href = searchQuery;
+        });
+    </script>
+
+</div>
+
+
+<style>
+    h1#logo + h1#logo {
+        display: none;
+    }
+</style>
+
+            </header>
+            
+    <div
+        id="mega-menu-target"
+        
+        data-config=""
+        data-environment="production"
+    ><style type="text/css" data-used-styles="index-Buj_i3NM.css">:root { --ttui_grey-900: #12181c;
+--ttui_grey-800: #232b2f;
+--ttui_grey-700: #374045;
+--ttui_grey-600: #525c63;
+--ttui_grey-500: #75838b;
+--ttui_grey-400: #a2acb2;
+--ttui_grey-300: #c4cbce;
+--ttui_grey-200: #dcdfe1;
+--ttui_grey-100: #ecedee;
+--ttui_grey-50: #f9fafa;
+--ttui_red-900: #551710;
+--ttui_red-800: #7d160f;
+--ttui_red-700: #a7080b;
+--ttui_red-600: #c50009;
+--ttui_red-500: #e40712;
+--ttui_red-400: #fe4736;
+--ttui_red-300: #ff836f;
+--ttui_red-200: #ffab9c;
+--ttui_red-100: #ffcfc7;
+--ttui_red-50: #fbedeb;
+--ttui_yellow-900: #ef7e13;
+--ttui_yellow-800: #f3a623;
+--ttui_yellow-700: #f5be2c;
+--ttui_yellow-600: #f7d635;
+--ttui_yellow-500: #f5e637;
+--ttui_yellow-400: #f8eb56;
+--ttui_yellow-300: #faef76;
+--ttui_yellow-200: #fbf49d;
+--ttui_yellow-100: #fdf8c4;
+--ttui_yellow-50: #fefde7;
+--ttui_green-900: #00703f;
+--ttui_green-800: #009158;
+--ttui_green-700: #00a365;
+--ttui_green-600: #00b674;
+--ttui_green-500: #00c680;
+--ttui_green-400: #00d093;
+--ttui_green-300: #00daa6;
+--ttui_green-200: #7be4c1;
+--ttui_green-100: #b3efd9;
+--ttui_green-50: #e0f9f0;
+--ttui_blue-900: #002e53;
+--ttui_blue-800: #004073;
+--ttui_blue-700: #00529d;
+--ttui_blue-600: #0061b3;
+--ttui_blue-500: #1c74c6;
+--ttui_blue-400: #4b8ed7;
+--ttui_blue-300: #7aaae4;
+--ttui_blue-200: #a1c3ec;
+--ttui_blue-100: #c9dbf4;
+--ttui_blue-50: #ebf1fa;
+--ttui_pink-900: #96036d;
+--ttui_pink-800: #b00480;
+--ttui_pink-700: #c90592;
+--ttui_pink-600: #e306a5;
+--ttui_pink-500: #f607b3;
+--ttui_pink-400: #f541c2;
+--ttui_pink-300: #f56acd;
+--ttui_pink-200: #f596da;
+--ttui_pink-100: #f4bee5;
+--ttui_pink-50: #f5e0ef;
+--ttui_purple-900: #3405bf;
+--ttui_purple-800: #6805c7;
+--ttui_purple-700: #7e06cd;
+--ttui_purple-600: #9605d4;
+--ttui_purple-500: #a700da;
+--ttui_purple-400: #b53de1;
+--ttui_purple-300: #c364e7;
+--ttui_purple-200: #d592ee;
+--ttui_purple-100: #e5bef4;
+--ttui_purple-50: #f5e5fa;
+--ttui_orange-900: #5e3a1f;
+--ttui_orange-800: #7c4822;
+--ttui_orange-700: #985423;
+--ttui_orange-600: #ae5e21;
+--ttui_orange-500: #d56c19;
+--ttui_orange-400: #f67807;
+--ttui_orange-300: #ff9801;
+--ttui_orange-200: #ffb62a;
+--ttui_orange-100: #ffdf83;
+--ttui_orange-50: #fbf4d1;
+--ttui_parchment-900: #4b4130;
+--ttui_parchment-800: #655724;
+--ttui_parchment-700: #75673b;
+--ttui_parchment-600: #8a793d;
+--ttui_parchment-500: #9c8e59;
+--ttui_parchment-400: #afa47a;
+--ttui_parchment-300: #c3bc9e;
+--ttui_parchment-200: #d7d2be;
+--ttui_parchment-100: #e8e5d9;
+--ttui_parchment-50: #f5f3ee;
+--ttui_common-0: #fff;
+--ttui_common-500: #242527;
+--ttui_common-1000: #000;
+--ttui_box-shadow-1: 0 .063rem .188rem color-mix(in srgb, var(--ttui_common-1000), transparent 50%), inset 0 -.063rem 0 color-mix(in srgb, var(--ttui_grey-800), transparent 90%);
+--ttui_box-shadow-2: 0 .25rem .5rem color-mix(in srgb, var(--ttui_grey-800), transparent 50%), inset 0 -.063rem 0 color-mix(in srgb, var(--ttui_common-1000), transparent 90%);
+--ttui_box-shadow-3: 0 .375rem .75rem color-mix(in srgb, var(--ttui_common-1000), transparent 50%);
+--ttui_box-shadow-5: 0 .75rem 2.25rem 0 color-mix(in srgb, var(--ttui_common-1000), transparent 48%);
+--ttui_focus-ring: 0 0 0 .125rem color-mix(in srgb, var(--ttui_common-0), transparent 52%), inset 0 -.063rem 0 color-mix(in srgb, var(--ttui_grey-800), transparent 90%);
+--ttui_underline: 0 -.125rem 0 0 var(--ttui_red-500) inset; }
+:root { --ttui_font-tiamat: "Tiamat Condensed SC";
+--ttui_font-roboto: Roboto, Helvetica, sans-serif; }
+@font-face{font-family:Tiamat Condensed SC;src:url(https://fonts.dndbeyond.com/tiamatcondensedsc-regular-webfont.woff2) format("woff2")}@font-face{font-family:Roboto Condensed;src:url(https://fonts.dndbeyond.com/robotocondensed-regular-webfont.woff2) format("woff2")}@font-face{font-family:Roboto;src:url(https://fonts.dndbeyond.com/roboto-regular-webfont.woff2) format("woff2");font-weight:400}@font-face{font-family:Roboto;src:url(https://fonts.dndbeyond.com/roboto-bold-webfont.woff2) format("woff2");font-weight:700}._megaMenu_14a9n_1 { height: 3.5rem;
+background: var(--ttui_color-megamenu--main);
+position: relative;
+display: none; }
+._content_14a9n_8 { max-width: 75rem;
+margin: 0 auto;
+padding: 0 1rem;
+display: flex;
+align-items: center;
+list-style: none; }
+._content_14a9n_8,
+._content_14a9n_8>li,
+._panelButton_14a9n_19,
+._button_14a9n_20,
+._link_14a9n_21 { height: 100%; }
+._content_14a9n_8 hr { display: block;
+width: 100%;
+opacity: .1;
+padding: 0;
+margin-right: 0; }
+._link_14a9n_21 { color: var(--ttui_color-megamenu--contrast);
+user-select: none;
+display: inline-flex;
+align-items: center;
+padding: 0;
+margin: 0 1rem;
+opacity: .7;
+text-decoration: none;
+font-size: .9rem;
+transition: opacity .25s;
+cursor: pointer; }
+._link_14a9n_21:hover { opacity: 1;
+color: var(--ttui_color-megamenu--contrast); }
+._link_14a9n_21:visited { color: var(--ttui_color-megamenu--contrast); }
+._panelButton_14a9n_19 { color: var(--ttui_color-megamenu--contrast);
+user-select: none;
+padding: 0 .5rem;
+cursor: pointer; }
+._panelButton_14a9n_19:hover>p { opacity: 1; }
+._button_14a9n_20 { background: none;
+border: none;
+margin: 0;
+display: flex;
+align-items: center; }
+._caretDown_14a9n_76 { fill: var(--ttui_color-megamenu--contrast);
+margin-left: .25rem; }
+
+@media screen and (min-width: 64rem) {
+._megaMenu_14a9n_1 { display: block; }
+}
+
+._card_1qzgg_1 { display: block;
+position: relative;
+border-radius: .25rem;
+overflow: hidden; }
+._card_1qzgg_1:hover ._background_1qzgg_7 { transform: scale(1.1); }
+._card_1qzgg_1:hover ._cardText_1qzgg_10 { opacity: 1; }
+._cardText_1qzgg_10 { color: var(--ttui_color-megamenu--contrast);
+text-transform: uppercase;
+font-size: 1.125rem;
+margin: 0;
+font-weight: 700;
+letter-spacing: .094rem;
+text-align: center;
+opacity: .7;
+transition: opacity .25s; }
+._background_1qzgg_7 { height: 100%;
+width: 100%;
+background-color: var(--ttui_color-megamenu--main);
+background-size: cover;
+background-position: center center;
+transform: scale(1);
+transition: transform .25s; }
+._content_1qzgg_36 { position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: #1c1d1ecc;
+padding: .625rem; }
+._flags_1qzgg_45 { display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap; }
+._flag_1qzgg_45 { margin-right: .5rem;
+border-radius: .25rem;
+text-transform: uppercase;
+font-size: .6875rem;
+letter-spacing: .094rem;
+font-weight: 700;
+line-height: 1.5;
+padding: .188rem .344rem .063rem .438rem;
+cursor: pointer; }
+._info_1qzgg_83 { background: var(--ttui_color-info--main);
+color: var(--ttui_color-info--contrast); }
+._heading_e6o7w_1 { display: flex;
+align-items: flex-end;
+margin-bottom: 1rem; }
+._title_e6o7w_7 { line-height: 1; }
+._title_e6o7w_7 { color: var(--ttui_color-megamenu--contrast);
+font-weight: 700;
+font-size: 1.25rem;
+margin: 0; }
+._twoColumns_1rojg_1 { column-count: 2; }
+._item_1rojg_9 { display: flex;
+align-items: center;
+margin-bottom: .469rem; }
+._icon_1rojg_15 { margin-right: .625rem; }
+._link_1rojg_19 { text-decoration: none;
+display: inline-block;
+opacity: .7;
+transition: opacity .25s; }
+._link_1rojg_19:hover { opacity: 1; }
+._linkText_1rojg_30 { color: var(--ttui_color-megamenu--contrast);
+display: block;
+font-size: .875rem;
+line-height: 1.85;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis; }
+
+@media screen and (min-width: 56.25rem) {
+._link_1rojg_19 { max-width: calc(25vw - 5.313rem); }
+}
+@media screen and (min-width: 75rem) {
+._link_1rojg_19 { max-width: 14.063 rem; }
+}
+@media screen and (min-width: 93.75rem) {
+._link_1rojg_19 { max-width: 14.688 rem; }
+}
+
+._panel_16aoe_1 { background: var(--ttui_color-megamenu--dark);
+box-shadow: 0 10px 10px #171819b3;
+display: none;
+position: absolute;
+top: 100%;
+left: 1.25rem;
+right: 1.25rem;
+padding: 1rem;
+z-index: 1001; }
+._container_16aoe_16 { max-width: 75rem;
+margin: 0 auto;
+padding: .5rem 0; }
+._collection_72xub_1 { display: grid;
+grid-template-columns: 2fr 1fr;
+column-gap: 1rem; }
+._cards_72xub_7 { display: grid;
+grid-template-columns: repeat(3,1fr);
+column-gap: 1rem;
+row-gap: 1rem; }
+._homebrewList_72xub_14 { height: 16.625rem; }
+._columns_1w7m5_1 { display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(5,1fr);
+column-gap: 1rem;
+row-gap: 1rem; }
+._miniHeight_1w7m5_9 { height: 2.75rem; }
+._fullHeight_1w7m5_13 { grid-row: 1 / span 5; }
+._media_vmwr7_1 { display: grid;
+grid-template-columns: repeat(4,1fr);
+column-gap: 1rem; }
+._tools_4hen7_1 { display: grid;
+grid-template-columns: repeat(3,1fr);
+column-gap: 1rem; }
+._stack_4hen7_7 { display: grid;
+row-gap: 1rem; }
+._MegaMenu_msb6l_1 { font-size: 1rem;
+font-family: var(--ttui_font-roboto);
+line-height: 1.5rem; }
+</style><style id="ddb-theme">
+  :root {
+    --ttui_color-primary--main: #ecedee;
+    --ttui_color-primary--dark: #75838b;
+    --ttui_color-primary--light: #f9fafa;
+    --ttui_color-primary--contrast: #000000;
+
+    --ttui_color-secondary--main: #00daa6;
+    --ttui_color-secondary--dark: #00b674;
+    --ttui_color-secondary--light: #b3efd9;
+    --ttui_color-secondary--contrast: #000000;
+
+    --ttui_color-warning--main: #ed6c02;
+    --ttui_color-warning--dark: #c77700;
+    --ttui_color-warning--light: #ffb547;
+    --ttui_color-warning--contrast: #ffffff;
+
+    --ttui_color-error--main: #ed6c02;
+    --ttui_color-error--dark: #c77700;
+    --ttui_color-error--light: #ffb547;
+    --ttui_color-error--contrast: #ffffff;
+
+    --ttui_color-info--main: #2196f3;
+    --ttui_color-info--dark: #0b79d0;
+    --ttui_color-info--light: #64b6f7;
+    --ttui_color-info--contrast: #ffffff;
+
+    --ttui_color-success--main: #4caf50;
+    --ttui_color-success--dark: #3b873e;
+    --ttui_color-success--light: #7bc67e;
+    --ttui_color-success--contrast: #ffffff;
+
+    --ttui_color-bg--paper: #12181c;
+    --ttui_color-bg--default: #232b2f;
+    --ttui_color-bg--pane: #12181c;
+    --ttui_color-bg--scroll: #12181c;
+
+    --ttui_color-rarity--uncommon: #7ebe15;
+    --ttui_color-rarity--rare: #41a9f2;
+    --ttui_color-rarity--veryRare: #c364e7;
+    --ttui_color-rarity--legendary: #ffb62a;
+    --ttui_color-rarity--artifact: #f77558;
+    --ttui_color-rarity--contrastText: #000000;
+
+    --ttui_color-reference--character: #ee8600;
+    --ttui_color-reference--magicItem: #41a9f2;
+    --ttui_color-reference--monster: #c60000;
+    --ttui_color-reference--skill: #7ebe15;
+    --ttui_color-reference--spell: #c364e7;
+    --ttui_color-reference--contrast: #000000;
+
+    --ttui_color-message--check: #c364e7;
+    --ttui_color-message--custom: #ecedee;
+    --ttui_color-message--damage: #f77558;
+    --ttui_color-message--healSave: #7ebe15;
+    --ttui_color-message--initiative: #ffb62a;
+    --ttui_color-message--toHit: #41a9f2;
+
+    --ttui_color-text--primary: #ecedee;
+    --ttui_color-text--secondary: #ecedee;
+    --ttui_color-text--disabled: #ecedee;
+
+    --ttui_color-action--hover: var(--ttui_grey-700);
+    --ttui_color-action--active: var(--ttui_grey-800);
+    --ttui_color-action--selected: var(--ttui_grey-900);
+
+    --ttui_color-megamenu--main: #26282a;
+    --ttui_color-megamenu--dark: #1c1d1e;
+    --ttui_color-megamenu--contrast: var(--ttui_common-0);
+  }
+</style><div class="_megaMenu_14a9n_1 _MegaMenu_msb6l_1"><menu class="_content_14a9n_8"><li><div class="_panelButton_14a9n_19"><button class="_button_14a9n_20 _link_14a9n_21">Collections<!-- --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" class="_caretDown_14a9n_76"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg></button><div class="_panel_16aoe_1"><div class="_container_16aoe_16"><div class="_collection_72xub_1"><div class="_cards_72xub_7"><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/characters"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/8894f93deeca83cdf0a6df3f36ffb52e.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">My Characters</p></div></div></a><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/my-campaigns"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/daf908720d8fe1e6004a5bd4baa3d3af.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">My Campaigns</p></div></div></a><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/my-encounters"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/e116466f43544117a34ed5f642c680f7.jpg&quot;);background-position:13% 21%"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><span class="_flag_1qzgg_45 _info_1qzgg_83">Beta</span><p class="_cardText_1qzgg_10">My Encounters</p></div></div></a><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/my-collection"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/9bf815deafa29a1b07c50a0264307264.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">My Homebrew Collection</p></div></div></a><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/my-creations"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/38c706fa87d6e12430b3fd6c9137adb4.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">My Homebrew Creations</p></div></div></a><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/my-dice"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/b1d137342cc397626cf6da9baf80a8d6.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">My Dice</p></div></div></a></div><div><div class="_heading_e6o7w_1"><p class="_title_e6o7w_7">Homebrew</p></div><div class="_twoColumns_1rojg_1 _homebrewList_72xub_14"><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/73731c4c5c26d45154065b4a6c1070e9.svg" alt="Create Spell" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/creations/create-spell"><span class="_linkText_1rojg_30">Create Spell</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/73731c4c5c26d45154065b4a6c1070e9.svg" alt="Create Monster" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/creations/create-monster"><span class="_linkText_1rojg_30">Create Monster</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/73731c4c5c26d45154065b4a6c1070e9.svg" alt="Create Magic Item" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/creations/create-magic-item"><span class="_linkText_1rojg_30">Create Magic Item</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/73731c4c5c26d45154065b4a6c1070e9.svg" alt="Create Background" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/creations/create-background"><span class="_linkText_1rojg_30">Create Background</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/73731c4c5c26d45154065b4a6c1070e9.svg" alt="Create Feat" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/creations/create-feat"><span class="_linkText_1rojg_30">Create Feat</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/73731c4c5c26d45154065b4a6c1070e9.svg" alt="Create Species" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/creations/create-species"><span class="_linkText_1rojg_30">Create Species</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/73731c4c5c26d45154065b4a6c1070e9.svg" alt="Create Subclass" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/creations/create-subclass"><span class="_linkText_1rojg_30">Create Subclass</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/28464d5fb675a73dcabe4b3fd0350949.svg" alt="Browse Spells" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/spells"><span class="_linkText_1rojg_30">Browse Spells</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/28464d5fb675a73dcabe4b3fd0350949.svg" alt="Browse Monsters" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/monsters"><span class="_linkText_1rojg_30">Browse Monsters</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/28464d5fb675a73dcabe4b3fd0350949.svg" alt="Browse Magic Items" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/magic-items"><span class="_linkText_1rojg_30">Browse Magic Items</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/28464d5fb675a73dcabe4b3fd0350949.svg" alt="Browse Backgrounds" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/backgrounds"><span class="_linkText_1rojg_30">Browse Backgrounds</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/28464d5fb675a73dcabe4b3fd0350949.svg" alt="Browse Feats" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/feats"><span class="_linkText_1rojg_30">Browse Feats</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/28464d5fb675a73dcabe4b3fd0350949.svg" alt="Browse Species" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/species"><span class="_linkText_1rojg_30">Browse Species</span></a></div><div class="_item_1rojg_9" style="padding-block:0.75px"><img class="_icon_1rojg_15" src="https://media.dndbeyond.com/mega-menu/28464d5fb675a73dcabe4b3fd0350949.svg" alt="Browse Subclasses" height="24"/><a class="_link_1rojg_19" href="https://dev.dndbeyond.com/homebrew/subclasses"><span class="_linkText_1rojg_30">Browse Subclasses</span></a></div></div></div></div></div></div></div></li><li><div class="_panelButton_14a9n_19"><button class="_button_14a9n_20 _link_14a9n_21">Game Rules<!-- --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" class="_caretDown_14a9n_76"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg></button><div class="_panel_16aoe_1"><div class="_container_16aoe_16"><div class="_columns_1w7m5_1"><a class="_card_1qzgg_1 _fullHeight_1w7m5_13" href="https://dev.dndbeyond.com/classes"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/aef3e4b2ac24457aa251c761d41ff07b.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Classes</p></div></div></a><a class="_card_1qzgg_1 _fullHeight_1w7m5_13" href="https://dev.dndbeyond.com/backgrounds"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/6e31ff6ea1f04ca2af9896f3f6d1b383.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Backgrounds</p></div></div></a><a class="_card_1qzgg_1 _fullHeight_1w7m5_13" href="https://dev.dndbeyond.com/species"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/8b551f9a1c2c4db09d65cdd7c139f9d5.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Species</p></div></div></a><a class="_card_1qzgg_1 _miniHeight_1w7m5_9" href="https://dev.dndbeyond.com/feats"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/a69ab5bf67b03308893b582dbef700e9.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Feats</p></div></div></a><a class="_card_1qzgg_1 _miniHeight_1w7m5_9" href="https://dev.dndbeyond.com/spells"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/a9eac9081b6240ca8d6325ca4766345e.png&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Spells</p></div></div></a><a class="_card_1qzgg_1 _miniHeight_1w7m5_9" href="https://dev.dndbeyond.com/equipment"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/b778ff3ca3f18e5f75ad4b348615cab5.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Equipment</p></div></div></a><a class="_card_1qzgg_1 _miniHeight_1w7m5_9" href="https://dev.dndbeyond.com/magic-items"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/c06b79eae8ee234d1cea4688e117152b.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Magic Items</p></div></div></a><a class="_card_1qzgg_1 _miniHeight_1w7m5_9" href="https://dev.dndbeyond.com/monsters"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/36ee49066331fc36e3b37147d123463a.jpg&quot;);background-position:center 11%"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Monsters</p></div></div></a></div></div></div></div></li><li><div class="_panelButton_14a9n_19"><button class="_button_14a9n_20 _link_14a9n_21">Sources<!-- --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" class="_caretDown_14a9n_76"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg></button></div></li><li><div class="_panelButton_14a9n_19"><button class="_button_14a9n_20 _link_14a9n_21">Tools<!-- --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" class="_caretDown_14a9n_76"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg></button><div class="_panel_16aoe_1"><div class="_container_16aoe_16"><div class="_tools_4hen7_1"><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/characters/builder" style="height:316px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/323a928e32eff87dee85dfbe0793ce12.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Character Builder</p></div></div></a><div class="_stack_4hen7_7"><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/games" style="height:150px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/049ddb9085342521d25c5230451cfd45.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><span class="_flag_1qzgg_45 _info_1qzgg_83">Beta</span><p class="_cardText_1qzgg_10">Maps</p></div></div></a><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/encounter-builder" style="height:150px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/e434a8385f9619f0d52480c3c3987059.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><span class="_flag_1qzgg_45 _info_1qzgg_83">Beta</span><p class="_cardText_1qzgg_10">Encounters</p></div></div></a></div><div class="_stack_4hen7_7"><a class="_card_1qzgg_1" href="https://dev.dndbeyond.com/player-app" style="height:150px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/3aa58aac2d02bb52d62204e158b48ce6.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Mobile App</p></div></div></a><a class="_card_1qzgg_1" href="https://avrae.io/" style="height:150px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/28d923cd45ad209411ef1ff07993721b.jpg&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Avrae Discord Bot</p></div></div></a></div></div></div></div></div></li><li><div class="_panelButton_14a9n_19"><button class="_button_14a9n_20 _link_14a9n_21">Media<!-- --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="1em" height="1em" class="_caretDown_14a9n_76"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg></button><div class="_panel_16aoe_1"><div class="_container_16aoe_16"><div class="_media_vmwr7_1"><a class="_card_1qzgg_1" href="https://www.dndbeyond.com/community-update" style="height:316px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/c2979f81837d8ee7c113a874da2909db.png&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Community Update</p></div></div></a><a class="_card_1qzgg_1" href="https://www.twitch.tv/dndbeyond" style="height:316px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/443085c3173d345e90d29881d8442a59.png&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Twitch</p></div></div></a><a class="_card_1qzgg_1" href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw" style="height:316px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/d5e1b6d07482834ebfcbc1f04bd6476d.png&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Youtube</p></div></div></a><a class="_card_1qzgg_1" href="https://www.dndbeyond.com/changelog" style="height:316px"><div class="_background_1qzgg_7" style="background-image:url(&quot;https://media.dndbeyond.com/mega-menu/4af3d4c196428ab0809cf71d332d540d.png&quot;)"></div><div class="_content_1qzgg_36"><div class="_flags_1qzgg_45"><p class="_cardText_1qzgg_10">Changelog</p></div></div></a></div></div></div></div></li><li><a class="_link_14a9n_21" href="https://dev.dndbeyond.com/forums">Forums</a></li><li><a class="_link_14a9n_21" href="https://dev.dndbeyond.com/essentials">Learn to Play</a></li><li><a class="_link_14a9n_21" href="https://dev.dndbeyond.com/store/subscribe">Subscribe</a></li><li><a class="_link_14a9n_21" href="https://marketplace.dndbeyond.com/">Marketplace</a></li></menu></div></div>
+
+       <link href="https://media.dndbeyond.com/mega-menu/assets/index-Buj_i3NM.css" rel="stylesheet"/>
+   
+        <script src="https://media.dndbeyond.com/mega-menu/assets/index-gsRIppo1.js" type=module></script>
+    
+            <!-- Below Header (Ad container), ex: Leaderboard and Badge unit -->
+            <section class="ad-container">
+                <div class="ad-bin">
+                    
+                </div>
+            </section>
+            <!-- Above Content, Ex: Breadcrumbs -->
+            <header class="page-header">
+                <div class="page-header__backdrop"></div>
+                <div class="page-header__extras">
+                    <div class="page-header__extra page-header__extra--content1">
+                         <section class="atf" role="complementary">
+    <!-- BREADCRUMBS -->
+    <nav class="b-breadcrumb b-breadcrumb-a">
+
+        <!-- WRAPPER -->
+        <ul class="b-breadcrumb-wrapper" itemscope itemtype="http://schema.org/BreadcrumbList">
+            
+            
+                <!-- ITEM -->
+                <li class="b-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                
+                        <a href="/" rel="up " itemprop="item"><span itemprop="name">Home</span></a>
+                        <meta itemprop="position" content="1"/>
+                
+                </li>
+                
+                <!-- ITEM -->
+                <li class="b-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                
+                        <span itemprop="name">Not found</span>
+                        <meta itemprop="position" content="2"/>
+                
+                </li>
+                
+
+        </ul>
+    </nav>
+</section>
+                    </div>
+                    <div class="page-header__spacer"></div>
+                    <div class="page-header__extra page-header__extra--content2">
+                        <div class="more-links">
+                            <div class="more-links__links">
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-header__primary">
+                    
+        <div class="page-heading">
+          <div class="page-heading__content">
+            <h1 class="page-title">
+              Not found
+            </h1>
+          </div>
+        </div>
+    
+                </div>
+            </header>
+
+            <div class="container">
+                <div id="content" class="main content-container">
+                    <section class="primary-content" role="main">
+                            
+    <div class="error-page error-page-404">
+        <div class="error-page-title">Page Not Found</div>
+            <div class="error-page-body">
+                <div class="error-page-body-image"></div>
+                <div class="error-page-body-text">
+                    We live in a world of uncertainty. But certainly, the page you were looking for isn’t here. Perhaps this halfling has stolen it and hidden it in another place. Try searching for what you were looking for in another realm.
+            </div>
+        </div>
+    </div>
+
+                        
+                    </section>
+                </div>
+            </div>
+            
+            <!-- Above Footer -->
+            <section class="ad-container ad-container-footer">
+                <div class="ad-bin">
+                    
+                </div>
+            </section>
+            <div id="footer-push"></div>
+        </div>
+        
+
+<footer class="ddb-footer">
+    
+        <div class="ddb-footer__privacy-policy-notice">
+            
+                <p>We have updated our&nbsp;<a  target="_blank" class="ddb-footer__link" href="https://www.dndbeyond.com/terms-conditions">terms and conditions</a>.&nbsp;Click the link to learn more.</p>
+            
+        </div>
+    
+    <div class="ddb-footer__main">
+        <div class="ddb-footer__main__container  ddb-footer__socials-main">
+            <div class="ddb-footer__main__container__logo-container">
+                <a target="_blank" href="https://www.dndbeyond.com/" class="ddb-footer__bottom__link"><img src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/logo-178.png" alt="D&D Beyond"></a>
+            </div>
+            <div>
+                <h5 class="ddb-footer__main__header">Support</h5>
+                <ul class="ddb-footer__main__list">
+                    <li class="ddb-footer__main__list-item--vertical"><a target="_blank" class="ddb-footer__link" href="https://dndbeyond-support.wizards.com/">Help Portal</a></li>
+                    <li class="ddb-footer__main__list-item--vertical"><a target="_blank" class="ddb-footer__link" href="https://www.dndbeyond.com/forums/d-d-beyond-general/bugs-support">Support Forum</a></li>
+                    <li class="ddb-footer__main__list-item--vertical"><a target="_blank" class="ddb-footer__link" href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy#donotsell">Don't Sell or Share My Info</a></li>
+                    <li class="ddb-footer__main__list-item--vertical">
+                    
+                       <a href="#" class="ddb-footer__link" onclick="ketch('showPreferences')">Cookie Settings</a>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="ddb-footer__main__header">About</h5>
+                <ul class="ddb-footer__main__list">
+                    <li class="ddb-footer__main__list-item--vertical"><a target="_blank" class="ddb-footer__link" href="https://dndbeyond.zendesk.com/hc/en-us/articles/360055233654-Contact-Information">Contact Us</a></li>
+                    <li class="ddb-footer__main__list-item--vertical"><a target="_blank" class="ddb-footer__link" href="https://company.wizards.com/en/careers">Careers</a></li>
+                    <li class="ddb-footer__main__list-item--vertical"><a target="_blank" class="ddb-footer__link" href="https://company.wizards.com/">Wizards of the Coast</a></li>
+                </ul>
+            </div>
+            <div class="ddb-footer__main__socials-container">
+                <h5 class="ddb-footer__main__header ddb-footer__main__header--socials">Find us on social media</h5>
+                <ul class="ddb-footer__main__list ddb-footer__main__list--horizontal">
+                    <li><a target="_blank" class="ddb-footer__link" aria-label="D&D Discord" href="https://dndbeyond.com/discord"><img class="ddb-footer__social-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/discord.png" alt="D&D Discord" /></a></li>
+                    <li><a target="_blank" class="ddb-footer__link" aria-label="D&D Beyond Instagram" href="https://www.instagram.com/DnDBeyond/"><img class="ddb-footer__social-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/instagram.png" alt="D&D Beyond Instagram" /></a></li>
+                    <li><a target="_blank" class="ddb-footer__link" aria-label="D&D Beyond Facebook" href="https://www.facebook.com/dndbeyond"><img class="ddb-footer__social-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/facebook.png" alt="D&D Beyond Facebook" /></a></li> 
+                    <li><a target="_blank" class="ddb-footer__link" aria-label="D&D Beyond Twitch" href="https://www.twitch.tv/dndbeyond"><img class="ddb-footer__social-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/twitch.png" alt="D&D Beyond Twitch" /></a></li>
+                    <li><a target="_blank" class="ddb-footer__link" aria-label="D&D Beyond Twitter" href="https://twitter.com/dndbeyond"><img class="ddb-footer__social-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/x.png" alt="D&D Beyond X" /></a></li>
+                    <li><a target="_blank" class="ddb-footer__link" aria-label="D&D Beyond Youtube" href="https://www.youtube.com/channel/UCPy-338BEVgDkQade0qJmkw"><img class="ddb-footer__social-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/youtube.png" alt="D&D Beyond YouTube" /></a></li>
+                    <li><a target="_blank" class="ddb-footer__link" aria-label="D&D Beyond Tiktok" href="https://www.tiktok.com/@dnd_beyond"><img class="ddb-footer__social-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/tiktok.png" alt="TikTok" /></a></li>
+                </ul>
+            </div>
+            <div class="ddb--footer__download-apps">
+                <h5 class="ddb-footer__main__header">Download the D&amp;D Beyond App</h5>
+                <ul class="ddb-footer__main__list ddb-footer__main__list--apps">
+                    <li class="ddb-footer__main__list-item--vertical"><a target="_blank" class="ddb-footer__link" href="https://play.google.com/store/apps/details?id=com.fandom.playercompanion"><img class="ddb--footer__main__apps-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/google_play.png" alt="Google Play" /></a></li>
+                    <li class="ddb-footer__main__list-item--vertical"><a target="_blank" class="ddb-footer__link" href="https://apps.apple.com/us/app/d-d-beyond/id1501810129"><img class="ddb--footer__main__apps-icon" src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/app_store.png" alt="App Store" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ddb-footer__bottom">
+        <div class="ddb-footer__bottom__text-container">
+            <div class="ddb-footer__bottom__header">© 2017-<span id="ddb-footer__year--1">2024</span>&nbsp;Wizards of the Coast LLC | All Rights Reserved</div>
+            <div>Dungeons & Dragons, D&D Beyond, D&D, Wizards of the Coast, the dragon ampersand, and all other Wizards of the Coast product names, campaign settings, their respective logos, and The World's Greatest Roleplaying Game are © and trademark Wizards of the Coast in the U.S.A. and other countries. © <span id="ddb-footer__year--2">2024</span> Wizards.</div>
+        </div>
+        <div>
+            <a target="_blank" href="https://company.wizards.com/en/legal/wizards-coasts-privacy-policy" class="ddb-footer__bottom__link">Privacy Policy</a>
+        </div>
+        <div>
+            <a
+                target="_blank"
+                href=https://www.dndbeyond.com/terms-conditions
+                class="ddb-footer__bottom__link">
+                    Terms of Service
+            </a>
+
+        </div>
+        <div class="ddb-footer__bottom__esrb-logo-container">
+            <a target="_blank" href="https://www.esrb.org/EPCConfirm/916/" class="ddb-footer__bottom__link"><img src="https://h7ktnb-us-east-1-dndbeyond-live-media.s3.amazonaws.com/footer-images/esrb.png" alt="ESRB"></a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function onDOMContentLoaded() {
+            const currentYear = new Date().getFullYear();
+            try {
+                document.getElementById("ddb-footer__year--1").innerText = currentYear;
+                document.getElementById("ddb-footer__year--2").innerText = currentYear;
+            } catch (e) {
+                console.error("Couldn't update footer's year.")
+            }
+        });
+    </script>
+    <style>
+.ddb-footer {
+    --common-0: #fff;
+    --common-1000: #000;
+    --grey-400: #a2acb2;
+    --footer-background: #242527;
+
+    margin-top: 20px;
+    padding: 0;
+    background: var(--common-1000);
+    line-height: 21px;
+}
+
+.ddb-footer * {
+    margin: 0;
+    padding: 0;
+}
+
+.ddb-footer__privacy-policy-notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--common-1000);
+    color: var(--grey-400);
+    font-size: 15px;
+    padding: 0.75rem 3.75rem;
+    text-align: center;
+}
+
+a.ddb-footer__link,
+a.ddb-footer__link:visited {
+    font-size: 15px;
+    color: var(--common-0);
+    text-decoration: none;
+}
+
+a.ddb-footer__link:hover {
+    color: var(--grey-400);
+    text-decoration: none;
+}
+
+.ddb-footer__main {
+    min-height: 265px;
+    background: var(--footer-background);
+}
+
+.ddb-footer__main__container {
+    max-width: 1440px;
+    display: grid;
+    justify-content: start;
+    column-gap: 64px;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: 1fr auto;
+    margin: 0 auto;
+    padding: 64px 48px;
+}
+
+.ddb-footer__main__header {
+    margin-bottom: 4px;
+    color: var(--grey-400);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.ddb-footer__main__header--socials {
+    margin-bottom: 14px;
+}
+
+.ddb-footer__main__list {
+    list-style-type: none;
+}
+
+.ddb-footer__main__list--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ddb-footer__main__list--horizontal li {
+    margin-right: 24px;
+    margin-bottom: 10px;
+}
+
+.ddb-footer__main__list--horizontal li:last-of-type {
+    margin-right: 0;
+}
+
+.ddb-footer__main__list-item--vertical {
+    margin-bottom: 4px;
+}
+
+.ddb--footer__main__apps-icon {
+  display: block;
+  width: 7.375rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.5rem;
+}
+
+.ddb-footer__socials-main {
+  box-sizing: border-box;
+  justify-content: start;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 2.5rem 3rem 1.5rem 3.25rem;
+}
+
+.ddb-footer__social-icon {
+  height: 1.45rem;
+  margin-right: 0.10rem;
+  margin-bottom: 0.625rem;
+}
+
+.ddb-footer__bottom {
+    background: var(--common-1000);
+    display: grid;
+    grid-template-columns: 11fr auto auto 42px;
+    grid-column-gap: 30px;
+    box-sizing: border-box;
+    max-width: 1440px;
+    grid-template-rows: 1fr auto;
+    align-content: center;
+    align-items: center;
+    padding: 14px 48px 16px;
+    margin: 0 auto;
+    color: var(--grey-400);
+    font-size: 0.75rem;
+}
+
+.ddb-footer__bottom__text-container {
+    max-width: 906px;
+}
+
+.ddb-footer__bottom__header {
+    color: var(--grey-400);
+    font-size: 12px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a.ddb-footer__bottom__link,
+a.ddb-footer__bottom__link:visited,
+a.ddb-footer__bottom__link:hover {
+    color: var(--grey-400);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 480px) {
+  .ddb-footer__social-icon {
+    height: 1.2rem;
+    margin-right: 0.2rem;
+  }
+
+  .ddb--footer__main__apps-icon {
+    width: 9rem;
+  }
+
+  .ddb--footer__download-apps {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 1227px) {
+    .ddb-footer__main__container {
+        column-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .ddb-footer__main__container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        grid-column-gap: 2.5rem;
+        column-gap: 40px;
+        padding: 24px 52px;
+    }
+
+    .ddb-footer__main__list {
+        margin-bottom: 24px;
+    }
+
+    .ddb-footer__main__list--apps {
+        margin-bottom: 0;
+    }
+
+    .ddb-footer__main__container__logo-container {
+        grid-column: span 2;
+        place-self: center;
+        margin-bottom: 34px;
+    }
+
+    .ddb-footer__main__header {
+        margin-bottom: 12px;
+    }
+
+    .ddb-footer__main__header--socials {
+        margin-bottom: 20px;
+    }
+
+    .ddb-footer__main__socials-container {
+        grid-column: span 2;
+    }
+
+    .ddb-footer__bottom {
+        min-height: 250px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        align-content: start;
+    }
+
+    .ddb-footer__bottom__text-container {
+        grid-column: span 2;
+        margin-bottom: 24px;
+    }
+
+    .ddb-footer__bottom__header {
+        margin-bottom: 16px;
+    }
+
+    .ddb-footer__bottom__esrb-logo-container {
+        margin-top: 16px;
+    }
+}
+    </style>
+</footer>
+
+    </div>
+
+        <!-- Layout End -->
+
+        
+
+<script type="text/javascript">
+    if (window.Cobalt) {
+        Cobalt.Device.initialize();
+        Cobalt.Burger.initializeEarly();
+
+        Cobalt.Constants.initialize({"StaticURL":"/content/1-0-2999-0","SkinPath":"/content/1-0-2999-0/skins/Waterdeep","MediaURL":"https://www.dndbeyond.com/","AvatarURL":"https://www.dndbeyond.com/avatars","AttachmentURL":"https://www.dndbeyond.com/attachments","ActiveConfiguration":"production","PrivacyPolicyLastUpdated":"635857344000000000"});
+
+        Cobalt.Constants.BuildVersion = "1-0-2999-0";
+        Cobalt.Constants.IsDevelopment = false;
+        Cobalt.Constants.IgnoredUserIDs = [];
+        Cobalt.Constants.FacebookAppID = "";
+        Cobalt.Constants.QuoteCssClasses = "";
+        Cobalt.User.EnabledLanguageIDs = [1];
+        Cobalt.User.MaxQuoteDepth = 5;
+        Cobalt.User.AuthToken = "";
+        Cobalt.TinyMCE.extraPlugins = "";
+        Cobalt.TinyMCE.extraButtons = "";
+        Cobalt.TinyMCE.extraCustomPlugins = "";
+
+        // NOTE: if you need to debug into tinymce, then change the following line to tinymce.js
+        Cobalt.TinyMCE.url = Cobalt.Constants.StaticURL + "/js/tinymce/tiny_mce/tinymce.min.js";
+        Cobalt.TinyMCE.customPluginUrl = Cobalt.Constants.StaticURL + "/js/tinymce/custom_plugins";
+        Cobalt.TinyMCE.skin_url = Cobalt.Constants.StaticURL + "/js/tinymce/custom_skin";
+
+
+        
+        Cobalt.Constants.SiteID = 62;
+        Cobalt.Constants.SiteName = "D&amp;D Beyond";
+        Cobalt.TinyMCE.fontColorEnabled = true;
+        Cobalt.TinyMCE.fontSizeEnabled = true;
+        Cobalt.TinyMCE.fontFamilyEnabled = true;
+        Cobalt.TinyMCE.textAlignmentEnabled = true;
+        Cobalt.TinyMCE.smiliesEnabled = false;
+        Cobalt.TinyMCE.forceSimpleBBCodeEditor = false;
+        Cobalt.Constants.NestedQuotePreference  = 1;
+        
+        $.ajaxSetup({
+            data: {},
+            timeout: 30000
+        });
+
+        
+
+        //bbcode entries
+        
+        Cobalt.Markup.customBBcodeButtons = [];
+
+        
+
+        Cobalt.CMS.CobaltCss = ["/content/1-0-2999-0/skins/global-TinyMCE/css/compiled.css"];
+        Cobalt.CMS.ProjectCss = ["/content/1-0-2999-0/skins/waterdeep/css/compiled.css"];
+
+        // set the tracking id for google analytics on this site
+        Cobalt.Analytics.trackingId = 'UA-26524418-48';
+    }
+</script>
+
+
+<script type="text/javascript">
+    if (window.Cobalt) {
+        Cobalt.runOnLoad(function () {
+            Cobalt.initialize([{dependency:Waterdeep, priority:99, name:'Waterdeep'},{dependency:Cobalt.Analytics, priority:99, name:'Cobalt.Analytics'},{dependency:Cobalt.TinyMCE, priority:99, name:'Cobalt.TinyMCE'},{dependency:Cobalt.Tabs, priority:99, name:'Cobalt.Tabs'},{dependency:Cobalt.NiceDates, priority:99, name:'Cobalt.NiceDates'},{dependency:Cobalt.Core, priority:99, name:'Cobalt.Core'},{dependency:Cobalt.Forms, priority:99, name:'Cobalt.Forms'},{dependency:Cobalt.UI, priority:99, name:'Cobalt.UI'},{dependency:Cobalt.Auth, priority:99, name:'Cobalt.Auth'},{dependency:Cobalt.Notifications, priority:99, name:'Cobalt.Notifications'},{dependency:Cobalt.Feedback, priority:99, name:'Cobalt.Feedback'},{dependency:Cobalt.WarningNotification, priority:99, name:'Cobalt.WarningNotification'},{dependency:Cobalt.Footer, priority:99, name:'Cobalt.Footer'},{dependency:Cobalt.Tidbit, priority:99, name:'Cobalt.Tidbit'},{dependency:Cobalt.BunnyEars, priority:99, name:'Cobalt.BunnyEars'}]);
+        });
+    }
+
+</script>
+
+    </body>
+
+</html>
